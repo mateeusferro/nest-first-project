@@ -1,11 +1,18 @@
 services:
   app:
-    image: app
-    build: .
-    ports:
-      - "3000:3000"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - DATABASE_HOST=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_USERNAME=root
+      - DATABASE_PASSWORD=root
+      - DATABASE_NAME=spendings-management
     depends_on:
       - mysql
+    ports:
+      - 3000:3000
 
   mysql:
     image: mysql:8.0-debian
@@ -13,4 +20,4 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=spendings-management
     ports:
-      - "3306:3306"
+      - 3306:3306
