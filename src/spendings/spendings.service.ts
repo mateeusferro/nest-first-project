@@ -4,8 +4,8 @@ import { UpdateSpendingDto } from './dto/update-spending.dto';
 import { DataSource, DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { Spending } from './entities/spending.entity';
 import { InjectDataSource, InjectRepository } from '@nestjs/typeorm';
-import { Pagination, Paging } from 'src/config/dtos/pagination.dto';
-import { SpendQuery } from 'src/config/dtos/spend-query.dto';
+import { Pagination, Paging } from 'src/dtos/pagination.dto';
+import { SpendQuery } from 'src/dtos/spend-query.dto';
 
 @Injectable()
 export class SpendingsService {

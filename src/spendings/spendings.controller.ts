@@ -12,8 +12,8 @@ import { SpendingsService } from './spendings.service';
 import { CreateSpendingDto } from './dto/create-spending.dto';
 import { UpdateSpendingDto } from './dto/update-spending.dto';
 import { Spending } from './entities/spending.entity';
-import { Pagination } from 'src/config/dtos/pagination.dto';
-import { SpendQuery } from 'src/config/dtos/spend-query.dto';
+import { Pagination } from 'src/dtos/pagination.dto';
+import { SpendQuery } from 'src/dtos/spend-query.dto';
 
 @Controller('spendings')
 export class SpendingsController {
